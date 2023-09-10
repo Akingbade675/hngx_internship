@@ -20,7 +20,7 @@ export class AppService {
     return {
       slack_name,
       current_day: daysOfWeek[currentDay],
-      utc_time: currentDate.toISOString(),
+      utc_time: currentDate.toISOString().split('.')[0] + 'Z',
       track,
       github_file_url:
         'https://github.com/Akingbade675/hngx_internship/blob/main/stage_one/src/app.service.ts',
