@@ -22,8 +22,9 @@ export class AppService {
       current_day: daysOfWeek[currentDay],
       utc_time: currentDate.toISOString(),
       track,
-      github_file_url: '',
-      github_repo_url: '',
+      github_file_url:
+        'https://github.com/Akingbade675/hngx_internship/blob/main/stage_one/src/app.service.ts',
+      github_repo_url: 'https://github.com/Akingbade675/hngx_internship',
       status_code: 200,
     };
   }
