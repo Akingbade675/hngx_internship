@@ -26,38 +26,6 @@ To install the dependencies for this API, run the following command in the root 
 $ yarn install
 ```
 
-## Running the app
-
-```bash
-# development
-$ yarn run start
-
-# watch mode
-$ yarn run start:dev
-
-# production mode
-$ yarn run start:prod
-```
-
-## Test
-
-```bash
-# unit tests
-$ yarn run test
-
-# e2e tests
-$ yarn run test:e2e
-
-# test coverage
-$ yarn run test:cov
-```
-
-## License
-
-Nest is [MIT licensed](LICENSE).
-
-# Nest.js API
-
 ## Prerequisites
 
 To run this API, you need to have the following installed on your system:
@@ -71,12 +39,13 @@ To run this API, you need to have the following installed on your system:
 
 To configure the database connection and other environment variables, create a .env file in the root directory of the project and add the following content:
 
-env
+```env
 # Database URL
 DB_URL=your_postgresql_database_url
 
 # Port number
 PORT=3000
+```
 
 
 You can obtain your PostgreSQL database URL from Heroku by following these steps:
@@ -92,7 +61,7 @@ You can obtain your PostgreSQL database URL from Heroku by following these steps
 To start the API in development mode, run the following command:
 
 ```bash
-npm run start:dev
+yarn run start:dev
 ```
 
 
@@ -101,7 +70,7 @@ This will launch the API on http://localhost:3000 (or the port number you specif
 To start the API in production mode, run the following command:
 
 ```bash
-npm run start:prod
+yarn run start:prod
 ```
 
 
@@ -129,6 +98,8 @@ heroku open
 
 
 ## Testing the API
+
+The API was tested using Postman test scripts. Results of the tests can be viewed [here](https://github.com/Akingbade675/hngx_internship/edit/main/stage_two/postman_test_run.json)
 
 To test the API endpoints, you can use any HTTP client tool such as [Postman](https://www.postman.com/) or [curl](https://curl.se/). The API supports the following operations:
 
@@ -177,11 +148,12 @@ The API will return JSON responses with appropriate status codes and messages. F
     "email": "johndoe@example.com"
   }
 }
+```
 
 
 If you try to fetch a person that does not exist, you will get a response like this:
 
-json
+```json
 {
   "status": "error",
   "message": "Person not found"
