@@ -1,0 +1,212 @@
+{
+	"id": "8af318ac-b041-4ff4-9c37-cdb8b5a1e36b",
+	"name": "REST API basics: Person CRUD",
+	"timestamp": "2023-09-12T12:41:35.419Z",
+	"collection_id": "23109539-50553dc7-a492-420d-b02e-72244a18773a",
+	"folder_id": 0,
+	"environment_id": "23109539-46240c15-7e46-4606-8007-4c0036a8ef23",
+	"totalPass": 15,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2023-09-12T12:41:29.560Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "7115fe26-54bf-4f3d-bdd3-7f28d03820cb",
+			"name": "Get a person",
+			"url": "http://localhost:3007\n/api/2",
+			"time": 3411,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Returns a person with the given name": true,
+				"Response is a valid person object": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Returns a person with the given name": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is a valid person object": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3411
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Returns a person with the given name": true,
+					"Response is a valid person object": true
+				}
+			]
+		},
+		{
+			"id": "7acb82f6-31bd-4078-b887-de3b6af33e35",
+			"name": "Create a person",
+			"url": "http://localhost:3007\n/api",
+			"time": 486,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Response status code is 201": true,
+				"Response has the required fields - id and name": true,
+				"The id value should be a non-negative integer": true,
+				"Name is a non-empty string": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required fields - id and name": {
+					"pass": 1,
+					"fail": 0
+				},
+				"The id value should be a non-negative integer": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Name is a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				486
+			],
+			"allTests": [
+				{
+					"Response status code is 201": true,
+					"Response has the required fields - id and name": true,
+					"The id value should be a non-negative integer": true,
+					"Name is a non-empty string": true
+				}
+			]
+		},
+		{
+			"id": "257161b7-79a7-4b14-923f-51de5ab9fd33",
+			"name": "Update person",
+			"url": "http://localhost:3007\n/api/2",
+			"time": 468,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response has the required fields - id and name": true,
+				"Id is a non-negative integer": true,
+				"Name is a non-empty string": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required fields - id and name": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Id is a non-negative integer": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Name is a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				468
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response has the required fields - id and name": true,
+					"Id is a non-negative integer": true,
+					"Name is a non-empty string": true
+				}
+			]
+		},
+		{
+			"id": "93bb9ee6-e3de-41f1-9ce4-e65b1678ffbe",
+			"name": "Delete person",
+			"url": "http://localhost:3007\n/api/1",
+			"time": 668,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Response status code is 404": true,
+				"Response has the required fields - statusCode and message": true,
+				"statusCode is a non-zero integer": true,
+				"Message is a non-empty string": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 404": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required fields - statusCode and message": {
+					"pass": 1,
+					"fail": 0
+				},
+				"statusCode is a non-zero integer": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Message is a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				668
+			],
+			"allTests": [
+				{
+					"Response status code is 404": true,
+					"Response has the required fields - statusCode and message": true,
+					"statusCode is a non-zero integer": true,
+					"Message is a non-empty string": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 5033,
+	"collection": {
+		"requests": [
+			{
+				"id": "7115fe26-54bf-4f3d-bdd3-7f28d03820cb",
+				"method": "GET"
+			},
+			{
+				"id": "7acb82f6-31bd-4078-b887-de3b6af33e35",
+				"method": "POST"
+			},
+			{
+				"id": "257161b7-79a7-4b14-923f-51de5ab9fd33",
+				"method": "PUT"
+			},
+			{
+				"id": "93bb9ee6-e3de-41f1-9ce4-e65b1678ffbe",
+				"method": "DELETE"
+			}
+		]
+	}
+}
