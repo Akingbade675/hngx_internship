@@ -5,6 +5,6 @@ import { PrismaClientExceptionFilter } from './prisma-client-exception/prisma-cl
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.useGlobalFilters(new PrismaClientExceptionFilter());
-  await app.listen(3007);
+  await app.listen(process.env.PORT || 3007);
 }
 bootstrap();
